@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Banner from "./Banner";
 
 const Home = () => {
 
@@ -7,7 +8,7 @@ const Home = () => {
       },[]);
     return (
         <div className="min-h-screen">
-            <p>Home</p>
+           <Banner></Banner>
         </div>
     );
 };
