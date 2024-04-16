@@ -1,14 +1,47 @@
-import { Link, NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
-
-    const links=
+  const { user, logout } = useContext(AuthContext);
+  const navigate=useNavigate();
+  const links = (
     <>
-    <li className="font-bold text-lg "><NavLink to='/'>Home</NavLink></li>
-    <li className="font-bold text-lg"><NavLink to='/estates' >Estates</NavLink></li>
-    <li className="font-bold text-lg"><NavLink to='/about'>About</NavLink></li>
-    <li className="font-bold text-lg"><NavLink to='/partners' >Our Partners</NavLink></li>
+      <li className="font-bold text-lg ">
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li className="font-bold text-lg">
+        <NavLink to="/estates">Estates</NavLink>
+      </li>
+      <li className="font-bold text-lg">
+        <NavLink to="/about">About Us</NavLink>
+      </li>
+
+      {user && (
+        <>
+          <li className="font-bold text-lg">
+            <NavLink to="/partners">Our Partners</NavLink>
+          </li>
+          <li className="font-bold text-lg ">
+            <NavLink to="/update">Update Profile</NavLink>
+          </li>
+        </>
+      )}
     </>
+  );
+
+  const handleLogOut = () => {
+    logout()
+    .then(()=>{
+      toast("You have successfully logged out");
+      navigate("/");
+    })
+    .catch(() => {
+      console.log("error")
+    })
+  }
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -33,19 +66,34 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-           {links}
+            {links}
           </ul>
         </div>
-        <a href="/" className="btn btn-ghost font-bold text-4xl"><span className="text-[#CC935C]">Dream</span>Dwell</a>
+        <a href="/" className="btn btn-ghost font-bold text-4xl">
+          <span className="text-[#CC935C]">Dream</span>Dwell
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-         {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn font-bold text-lg text-white bg-[#CC935C]"><Link to="/login">Log In</Link>
-        </button>
+          {
+            user?
+            <>
+            <button  className="tooltip tooltip-bottom" data-tip={user.displayName}>
+          <Link to="">
+          <img src={user.photoURL} onTouchMove={user.displayName} className="rounded-full w-12 h-12 mr-3" alt="" />
+          </Link>
+            </button>
+             <button onClick={handleLogOut} className="btn font-bold text-lg text-white bg-[#CC935C]">
+            Log Out
+            </button>
+            </>
+            :
+            <button className="btn font-bold text-lg text-white bg-[#CC935C]">
+            <Link to="/login">Log In</Link>
+            </button>
+          }     
       </div>
     </div>
   );

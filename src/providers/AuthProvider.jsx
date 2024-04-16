@@ -19,14 +19,17 @@ const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [stopLoad, setStopLoad] = useState(false);
+  
 
   useEffect(() =>{
     const unSubscribe=onAuthStateChanged(auth,currentUser=>{
         setUser(currentUser);
+        console.log(currentUser);
         setLoading(false);
     });
     return ()=>unSubscribe();
-  },[])
+  },[stopLoad])
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -57,6 +60,7 @@ const AuthProvider = ({ children }) => {
     signInUser,
     logout,
     loading,
+    setStopLoad,
     signInWithGoogle,
     signInWithGithub
   };
