@@ -1,10 +1,35 @@
+import { useContext } from "react";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 const LogIn = () => {
+
+ const {signInWithGoogle,signInWithGithub}=useContext(AuthContext);
+
     const handleLogIn = (e) => {
         e.preventDefault();
         
+        
     }
+
+    const handleGoogle = () => {
+        signInWithGoogle()
+        .then((result) => {
+            console.log(result.user);
+          }).catch((error) => {
+              console.error(error);
+          });
+    }
+
+    
+    const handleGithub = () => {
+      signInWithGithub()
+      .then((result) => {
+          console.log(result.user);
+        }).catch((error) => {
+            console.error(error);
+        });
+  }
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="w-full py-6 rounded-xl border-[#CC935C] border-1 max-w-sm shadow-2xl bg-base-100 my-6">
@@ -40,12 +65,12 @@ const LogIn = () => {
         </form>
         <hr></hr>
         <div className="text-center my-4">
-        <button className="btn bg-[#CC935C] text-white">
+        <button onClick={handleGoogle} className="btn bg-[#CC935C] text-white">
         <FaGoogle></FaGoogle>
           Log In With Google
         </button>
         <p>OR</p>
-        <button className="btn bg-[#CC935C] text-white">
+        <button onClick={handleGithub} className="btn bg-[#CC935C] text-white">
        <FaGithub></FaGithub>
           Log In With Github
         </button>
