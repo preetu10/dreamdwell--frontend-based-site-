@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Root = () => {
     return (
         <>
-        <div className="font-display max-w-7xl mx-auto">
+        <div className="font-display max-w-7xl mx-auto min-h-screen">
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>

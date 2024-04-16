@@ -4,8 +4,9 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
-  const { user, logout } = useContext(AuthContext);
+  const { user, logout} = useContext(AuthContext);
   const navigate=useNavigate();
+  
   const links = (
     <>
       <li className="font-bold text-lg ">
@@ -81,8 +82,8 @@ const Navbar = () => {
             user?
             <>
             <button  className="tooltip tooltip-bottom" data-tip={user.displayName}>
-          <Link to="">
-          <img src={user.photoURL} onTouchMove={user.displayName} className="rounded-full w-12 h-12 mr-3" alt="" />
+          <Link to="/profile">
+          <img src={user?.photoURL} onTouchMove={user.displayName} className="rounded-full w-12 h-12 mr-3" alt="user" />
           </Link>
             </button>
              <button onClick={handleLogOut} className="btn font-bold text-lg text-white bg-[#CC935C]">

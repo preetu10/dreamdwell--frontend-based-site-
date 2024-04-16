@@ -9,7 +9,7 @@ const LogIn = () => {
   const { 
     signInWithGoogle, 
     signInWithGithub, 
-    signInUser,setStopLoad } = useContext(AuthContext);
+    signInUser } = useContext(AuthContext);
 
   const [showPW, setShowPW] = useState(false);
   const navigate = useNavigate();
@@ -20,7 +20,6 @@ const LogIn = () => {
     const password = e.target.password.value;
     signInUser(email, password)
       .then(() => {
-        setStopLoad(true);
         toast.success("You have successfully logged in.");
         navigate("/");
         
