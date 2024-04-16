@@ -21,15 +21,15 @@ const EstateDetail = () => {
           <p className="py-3 text-base">
            {info.description}
           </p>
-          <p className="text-lg mt-3 mb-3"><span className=" font-semibold mr-3 ">Area:</span> <span className="font-medium">
+          <p className="text-lg mt-3 mb-2"><span className=" font-semibold mr-3 ">Area:</span> <span className="font-medium">
           {info.area}</span></p>
-          <p className="text-lg  mt-3 mb-3"><span className="font-semibold mr-3">Price:</span> <span className="font-medium">
+          <p className="text-lg  mt-3 mb-2"><span className="font-semibold mr-3">Price:</span> <span className="font-medium">
           {info.price}</span></p>
-          <p className="text-lg  mt-3 mb-3"><span className="font-semibold mr-3">Location:</span> <span className="font-medium">
+          <p className="text-lg  mt-3 mb-2"><span className="font-semibold mr-3">Location:</span> <span className="font-medium">
           {info.location}</span></p>
-          <p className="text-lg  mt-3 mb-3"><span className="font-semibold mr-3">Status:</span> <span className="font-medium">
+          <p className="text-lg  mt-3 mb-2"><span className="font-semibold mr-3">Status:</span> <span className="font-medium">
           {info.status}</span></p>
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-row gap-5 items-center">
             <span className="font-semibold mr-3 text-lg">Facilities:</span>
            {
             info.facilities.map((facility,index) => 
@@ -37,7 +37,7 @@ const EstateDetail = () => {
             )
            }
           </div>
-           <button className="btn bg-[#CC935C] text-white">Add to cart</button> 
+           <button className="btn mt-2 bg-[#CC935C] text-white">Add to cart</button> 
         </div>
       </div>
     </div>
