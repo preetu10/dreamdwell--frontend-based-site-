@@ -10,7 +10,7 @@ const {user}=useContext(AuthContext);
         <img
           src={user.photoURL}
           alt="user image"
-          className="rounded-xl"
+          className="rounded-xl w-72 h-72"
         />
       </figure>
       <div className="card-body items-center text-center">

@@ -60,7 +60,7 @@ const handleRegister = (e) => {
 }
     return (
         <div className="flex flex-col items-center justify-center">
-        <div className="w-full py-6 rounded-xl border-[#CC935C] border-1 max-w-sm shadow-2xl bg-base-100 my-6">
+        <div className="w-full py-6 rounded-xl border-[#CC935C] border-1 max-w-lg shadow-2xl bg-base-100 my-6">
           <p className="text-center font-bold text-3xl  mb-2 mt-5">
             Please Register
           </p>

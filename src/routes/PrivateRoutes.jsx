@@ -5,19 +5,17 @@ import { Navigate } from 'react-router-dom';
 const PrivateRoutes = ({children}) => {
 const {user,loading} =useContext(AuthContext);
 
+// console.log(user,loading);
+if(user){
+    return children;
+}
 if(loading){
     return (
-   
     <div className='text-center'>
     <span className="loading loading-spinner loading-lg"></span>
     </div>
     )
 }
-
-if(user){
-    return children;
-}
-
     return <Navigate to="/login"></Navigate>
 };
 PrivateRoutes.propTypes={
