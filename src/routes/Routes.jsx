@@ -26,11 +26,11 @@ const routes =createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path:"/update",
+                path:"/update/:name",
                 element:<PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
             },
             {
-                path:"/profile",
+                path:"/profile/:name",
                 element:<PrivateRoutes><Profile></Profile></PrivateRoutes>
 
             }

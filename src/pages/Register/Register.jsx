@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from 'react-toastify';
@@ -10,6 +10,10 @@ const Register = () => {
 const {createUser,logout}=useContext(AuthContext);
 const [showPW,setShowPW]=useState(false);
 const navigate=useNavigate();
+
+useEffect(() => {
+  document.title="DreamDwell-Register"
+},[]);
 
 const handleRegister = (e) => {
     e.preventDefault();

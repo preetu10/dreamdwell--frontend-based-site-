@@ -25,7 +25,7 @@ const Navbar = () => {
             <NavLink to="/partners">Our Partners</NavLink>
           </li>
           <li className="font-bold text-lg ">
-            <NavLink to="/update">Update Profile</NavLink>
+            <NavLink to={`/update/${user.displayName}`}>Update Profile</NavLink>
           </li>
         </>
       )}
@@ -82,7 +82,7 @@ const Navbar = () => {
             user?
             <>
             <button  className="tooltip tooltip-bottom" data-tip={user.displayName}>
-          <Link to="/profile">
+          <Link to={`/profile/${user.displayName}`}>
           <img src={user?.photoURL} onTouchMove={user.displayName} className="rounded-full w-12 h-12 mr-3" alt="user" />
           </Link>
             </button>

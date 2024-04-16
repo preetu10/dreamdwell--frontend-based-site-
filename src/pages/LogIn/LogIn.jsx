@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -13,6 +13,10 @@ const LogIn = () => {
 
   const [showPW, setShowPW] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title="DreamDwell-LogIn";
+  },[]);
 
   const handleLogIn = (e) => {
     e.preventDefault();

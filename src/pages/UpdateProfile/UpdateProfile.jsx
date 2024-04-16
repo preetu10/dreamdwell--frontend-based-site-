@@ -2,15 +2,18 @@ import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
   const { user, updateProfileInfo } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
   const navigate = useNavigate();
+  const loc=useLocation();
+  console.log(loc);
 
   useEffect(() => {
+    document.title="DreamDwell-Update-Profile";
     setName(user.displayName);
     setPhoto(user.photoURL);
   }, [user.displayName, user.photoURL]);

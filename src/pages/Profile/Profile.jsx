@@ -1,8 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Profile = () => {
 const {user}=useContext(AuthContext);
+useEffect(() =>{
+    document.title=`DreamDwell-${user.displayName}`
+},[user])
 
   return (
     <div className="card bg-base-100 shadow-xl py-4 my-5">
