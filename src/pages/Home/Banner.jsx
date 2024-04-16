@@ -6,17 +6,19 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Autoplay, EffectFade, Navigation } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 const Banner = () => {
   return (
     <div>
       <Swiper
         spaceBetween={30}
         effect={"fade"}
-        navigation={true}
         loop={true}
+        pagination={{
+          clickable: true,
+        }}
         autoplay={{ delay: 3500 }}
-        modules={[EffectFade, Navigation, Autoplay]}
+        modules={[EffectFade, Pagination, Autoplay]}
         className="mySwiper rounded-xl mt-3 mb-10"
       >
         <SwiperSlide>

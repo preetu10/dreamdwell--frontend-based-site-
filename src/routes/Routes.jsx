@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import Profile from "../pages/Profile/Profile";
+import EstateDetail from "../pages/EstateDetail/EstateDetail";
 const routes =createBrowserRouter([
     {
         path: "/",
@@ -33,7 +34,11 @@ const routes =createBrowserRouter([
             {
                 path:"/profile/:name",
                 element:<PrivateRoutes><Profile></Profile></PrivateRoutes>
-
+            },
+            {
+                path:"/property-details/:id",
+                element:<PrivateRoutes><EstateDetail></EstateDetail></PrivateRoutes>,
+                loader:()=>fetch('../estates.json'),
             }
         ]
       },

@@ -1,18 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
+import Estates from "./Estates";
 
 const Home = () => {
-    const [estates,setEstates]=useState([]);
+  
     const data=useLoaderData();
-    console.log(data[0]);
 
     useEffect(() => {
         document.title="DreamDwell"
       },[]);
     return (
         <div className="min-h-screen">
-           <Banner></Banner>
+          <section>
+          <Banner></Banner>
+          </section>
+          <section>
+            <Estates data={data}></Estates>
+          </section>
         </div>
     );
 };
