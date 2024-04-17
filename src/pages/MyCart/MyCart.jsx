@@ -1,14 +1,17 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { getEstateFromLocalStorage } from "../../utility/localstorage";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Cart from "./Cart";
 import { FaShoppingCart } from "react-icons/fa";
+import { AuthContext } from "../../providers/AuthProvider";
 const MyCart = () => {
   const data = useLoaderData();
   const { email } = useParams();
   const [carts, setCarts] = useState([]);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
+    document.title = `DreamDwell-${user.displayName}-Cart`;
     const ids = getEstateFromLocalStorage(email);
     if (ids.length > 0) {
       const estates = [];
@@ -29,16 +32,18 @@ const MyCart = () => {
       </h1>
       <hr className="mb-2"></hr>
       <hr className="mb-4"></hr>
-     <div className="flex flex-row ">
+      <div className="flex flex-row ml-5">
         <FaShoppingCart color="#CC935C" className="w-7 h-7"></FaShoppingCart>
-     <p className="text-neutral-500 text-lg font-semibold px-3">Total Cart: {carts.length}</p>
-     </div>
-     <hr className="mb-2 mt-2"></hr>
+        <p className="text-neutral-500 text-lg font-semibold px-3 ">
+          Total Cart: {carts.length}
+        </p>
+      </div>
+      <hr className="mb-2 mt-2"></hr>
       <hr className="mb-4"></hr>
       <div className="space-y-4  flex flex-col items-center justify-center">
-      {
-      carts.map((cart)=><Cart key={cart.id} data={cart}></Cart>)
-      }
+        {carts.map((cart) => (
+          <Cart key={cart.id} data={cart}></Cart>
+        ))}
       </div>
     </div>
   );

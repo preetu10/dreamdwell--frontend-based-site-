@@ -1,7 +1,7 @@
 import { FaDesktop, FaUserFriends } from "react-icons/fa";
 import { FaBuilding, FaThumbsUp } from "react-icons/fa6";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init();
 const WhyChooseUs = () => {
@@ -16,8 +16,12 @@ const WhyChooseUs = () => {
       </p>
       <div className="grid grid-cols-1 sm:items-center sm:justify-center lg:grid-cols-2 md:grid-cols-2  gap-6 mt-2 mb-5 mx-auto">
         {/* 1st card */}
-        <div data-aos="zoom-out-up" data-aos-delay="800"
-        data-aos-duration="1000" className="card  p-2 bg-gradient-to-br from-red-200 to-transparent via-red-100shadow-xl">
+        <div
+          data-aos="zoom-out-up"
+          data-aos-delay="800"
+          data-aos-duration="1000"
+          className="card  p-2 bg-gradient-to-br from-red-200 to-transparent via-red-100shadow-xl"
+        >
           <div className="card-body">
             <FaBuilding color=" #FF5733" className="w-12 h-12"></FaBuilding>
             <h2 className="card-title font-bold">
@@ -31,8 +35,12 @@ const WhyChooseUs = () => {
           </div>
         </div>
         {/* 2nd card */}
-        <div data-aos="zoom-out-up" data-aos-delay="900"
-        data-aos-duration="1000" className="card p-2  bg-gradient-to-br from-blue-200 to-transparent via-blue-100  shadow-xl">
+        <div
+          data-aos="zoom-out-up"
+          data-aos-delay="900"
+          data-aos-duration="1000"
+          className="card p-2  bg-gradient-to-br from-blue-200 to-transparent via-blue-100  shadow-xl"
+        >
           <div className="card-body">
             <FaUserFriends
               color="#2196F3"
@@ -50,13 +58,14 @@ const WhyChooseUs = () => {
           </div>
         </div>
         {/* 3rd card */}
-        <div data-aos="zoom-out-up" data-aos-delay="1000"
-        data-aos-duration="1000" className="card p-2 bg-gradient-to-br from-yellow-200 to-transparent via-yellow-100 shadow-xl">
+        <div
+          data-aos="zoom-out-up"
+          data-aos-delay="1000"
+          data-aos-duration="1000"
+          className="card p-2 bg-gradient-to-br from-yellow-200 to-transparent via-yellow-100 shadow-xl"
+        >
           <div className="card-body">
-            <FaDesktop
-              color="#D5A000"
-              className="w-12 h-12"
-            ></FaDesktop>
+            <FaDesktop color="#D5A000" className="w-12 h-12"></FaDesktop>
             <h2 className="card-title font-bold">Seamless Online Experience</h2>
             <p>
               Explore properties effortlessly with our user-friendly platform.
@@ -67,8 +76,12 @@ const WhyChooseUs = () => {
           </div>
         </div>
         {/* 4th card */}
-        <div data-aos="zoom-out-up" data-aos-delay="1100"
-        data-aos-duration="1000" className="card p-2 bg-gradient-to-br from-green-200 to-green-100shadow-xl">
+        <div
+          data-aos="zoom-out-up"
+          data-aos-delay="1100"
+          data-aos-duration="1000"
+          className="card p-2 bg-gradient-to-br from-green-200 to-green-100shadow-xl"
+        >
           <div className="card-body">
             <FaThumbsUp color="#388E3C" className="w-12 h-12"></FaThumbsUp>
             <h2 className="card-title font-bold ">

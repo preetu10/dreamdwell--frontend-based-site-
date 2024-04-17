@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const Cart = ({ data }) => {
-  console.log(data);
   return (
     <div data-aos="fade-up"
     data-aos-duration="400"  className="card w-9/12 h-full flex flex-col gap-5 md:card-side lg:card-side md:justify-center md:items-center bg-base-100 shadow-xl my-8">
