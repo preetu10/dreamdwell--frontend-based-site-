@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Estate from "./Estate";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Estates = ({data}) => {
     const [estates,setEstates]=useState([]);

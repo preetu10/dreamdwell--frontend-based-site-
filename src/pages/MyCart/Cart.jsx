@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const Cart = ({ data }) => {
   console.log(data);
   return (
-    <div className="card w-9/12 h-full flex flex-col gap-5 md:card-side lg:card-side md:justify-center md:items-center bg-base-100 shadow-xl my-8">
+    <div data-aos="fade-up"
+    data-aos-duration="400"  className="card w-9/12 h-full flex flex-col gap-5 md:card-side lg:card-side md:justify-center md:items-center bg-base-100 shadow-xl my-8">
       <figure className="w-[280px] h-[280px]">
         <img src={data.image} alt="estate" className="rounded-xl w-[280px] h-[280px]" />
       </figure>

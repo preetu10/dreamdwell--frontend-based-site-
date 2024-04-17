@@ -1,5 +1,8 @@
 import { FaCheckCircle, FaStar, FaUsers } from "react-icons/fa";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 const OurAchievements = () => {
   return (
     <div className="mb-12 mt-8">
@@ -13,7 +16,8 @@ const OurAchievements = () => {
       </p>
 
       <div className="flex items-center justify-center">
-        <div className="flex flex-col gap-3 md:flex-row md:gap-5 lg:flex-row lg:gap-16 lg:max-w-5xl">
+        <div data-aos="flip-up" data-aos-delay="120"
+        data-aos-duration="1000" className="flex flex-col gap-3 md:flex-row md:gap-5 lg:flex-row lg:gap-16 lg:max-w-5xl">
 
           {/* 1st stat */}
           <div className="stat shadow-2xl bg-lime-50 border-emerald-400 border-2 rounded-xl space-y-2 p-8 ">

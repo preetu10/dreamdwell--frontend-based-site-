@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-
+import 'animate.css';
 const Profile = () => {
 const {user}=useContext(AuthContext);
 useEffect(() =>{
@@ -13,12 +13,12 @@ useEffect(() =>{
         <img
           src={user.photoURL}
           alt="user image"
-          className="rounded-xl w-72 h-72"
+          className="animate__animated animate__fadeInUp rounded-xl w-72 h-72"
         />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">{user.displayName}</h2>
-        <p>{user.email}</p>
+        <h2 className="card-title animate__animated animate__fadeInUp">{user.displayName}</h2>
+        <p className="animate__animated animate__fadeInUp">{user.email}</p>
        
       </div>
     </div>

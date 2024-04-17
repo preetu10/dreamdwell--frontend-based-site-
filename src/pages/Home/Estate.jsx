@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Estate = ({info}) => {
    
     return (
-        <div className="card  bg-base-100 shadow-xl">
+        <div  className="card bg-base-100 shadow-xl">
         <figure className="h-[270px]"><img src={info.image} alt="property"  className="rounded-xl" /></figure>
         <div className="card-body">
           <h2 className="card-title font-bold">
