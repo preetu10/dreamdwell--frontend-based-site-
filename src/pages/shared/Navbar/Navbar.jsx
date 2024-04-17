@@ -13,10 +13,10 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="font-bold text-lg">
-        <NavLink to="/estates">Estates</NavLink>
+        <NavLink to="/about">About Us</NavLink>
       </li>
       <li className="font-bold text-lg">
-        <NavLink to="/about">About Us</NavLink>
+        <NavLink to="/contact">Contact Us</NavLink>
       </li>
 
       {user && (

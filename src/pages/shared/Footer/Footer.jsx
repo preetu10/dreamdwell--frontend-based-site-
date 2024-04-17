@@ -2,10 +2,10 @@ const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
       <nav className="grid grid-flow-col gap-4">
+      <a href='/' className="link link-hover">Home</a>
         <a href='/about' className="link link-hover">About Us</a>
-        <a href='/estates' className="link link-hover">Contact</a>
-        <a  href='/partners'
-        className="link link-hover">Our Partners</a>
+        <a href='/contact' className="link link-hover">Contact Us</a>
+     
        
       </nav>
       <nav>

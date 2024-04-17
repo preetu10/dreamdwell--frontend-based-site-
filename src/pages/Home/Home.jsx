@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
 import Estates from "./Estates";
 import WhyChooseUs from "./WhyChooseUs";
+import OurAchievements from "./OurAchievements";
 
 const Home = () => {
   
@@ -21,6 +22,9 @@ const Home = () => {
           </section>
           <section>
             <WhyChooseUs></WhyChooseUs>
+          </section>
+          <section>
+            <OurAchievements></OurAchievements>
           </section>
         </div>
     );

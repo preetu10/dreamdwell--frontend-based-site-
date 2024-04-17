@@ -8,6 +8,8 @@ import PrivateRoutes from "./PrivateRoutes";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import Profile from "../pages/Profile/Profile";
 import EstateDetail from "../pages/EstateDetail/EstateDetail";
+import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
 const routes =createBrowserRouter([
     {
         path: "/",
@@ -26,6 +28,14 @@ const routes =createBrowserRouter([
             {
                 path:"/register",
                 element: <Register></Register>
+            },
+            {
+                path:"/about",
+                element:<About></About>
+            },
+            {
+                path:"/contact",
+                element:<Contact></Contact>
             },
             {
                 path:"/update/:name",
