@@ -10,6 +10,7 @@ import Profile from "../pages/Profile/Profile";
 import EstateDetail from "../pages/EstateDetail/EstateDetail";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import MyCart from "../pages/MyCart/MyCart";
 const routes =createBrowserRouter([
     {
         path: "/",
@@ -48,6 +49,11 @@ const routes =createBrowserRouter([
             {
                 path:"/property-details/:id",
                 element:<PrivateRoutes><EstateDetail></EstateDetail></PrivateRoutes>,
+                loader:()=>fetch('../estates.json'),
+            },
+            {
+                path:"/cart/:email",
+                element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
                 loader:()=>fetch('../estates.json'),
             }
         ]

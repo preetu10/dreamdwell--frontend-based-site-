@@ -22,7 +22,7 @@ const Navbar = () => {
       {user && (
         <>
           <li className="font-bold text-lg">
-            <NavLink to="/partners">Our Partners</NavLink>
+            <NavLink to={`/cart/${user.email}`}>My Cart</NavLink>
           </li>
           <li className="font-bold text-lg ">
             <NavLink to={`/update/${user.displayName}`}>Update Profile</NavLink>
