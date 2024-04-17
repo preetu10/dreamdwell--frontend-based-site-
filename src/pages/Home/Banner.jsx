@@ -26,7 +26,7 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                "url(/public/house.jpg)",
+                "url(house.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-50"></div>
@@ -45,7 +45,7 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                "url(/public/luxury.jpg)",
+                "url(luxury.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-50"></div>
@@ -64,7 +64,7 @@ const Banner = () => {
             className="hero min-h-screen"
             style={{
               backgroundImage:
-                "url(/public/cozy.jpg)",
+                "url(cozy.jpg)",
             }}
           >
             <div className="hero-overlay bg-opacity-50"></div>

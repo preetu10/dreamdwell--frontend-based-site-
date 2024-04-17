@@ -10,7 +10,7 @@ const About = () => {
       <div
         className="hero min-h-screen rounded-2xl  mb-10"
         style={{
-          backgroundImage: "url(/public/about.jpg)",
+          backgroundImage: "url(about.jpg)",
         }}
       >
         <div className="hero-overlay rounded-2xl bg-opacity-60"></div>
@@ -38,28 +38,28 @@ const About = () => {
               data-aos="flip-right"
               data-aos-delay="20"
               data-aos-duration="800"
-              src="/public/Rectangle 14.png"
+              src="Rectangle 14.png"
               alt=""
             />
             <img
               data-aos="flip-left"
               data-aos-delay="30"
               data-aos-duration="1000"
-              src="/public/Rectangle 15.png"
+              src="Rectangle 15.png"
               alt=""
             />
             <img
               data-aos="flip-right"
               data-aos-delay="40"
               data-aos-duration="1000"
-              src="/public/Rectangle 16.png"
+              src="Rectangle 16.png"
               alt=""
             />
             <img
               data-aos="flip-left"
               data-aos-delay="50"
               data-aos-duration="1000"
-              src="/public/Rectangle 17.png"
+              src="Rectangle 17.png"
               alt=""
             />
           </div>
@@ -98,7 +98,7 @@ const About = () => {
           <div  data-aos="zoom-in"
               data-aos-delay="40"
               data-aos-duration="1000" className="col-span-3  ">
-            <img src="/public/imtiaz.png" alt="" className="mx-auto" />
+            <img src="imtiaz.png" alt="" className="mx-auto" />
             <p className="text-center font-semibold mt-2">Imtiaz Hossain</p>
             <p className="text-center text-neutral-600 font-medium mt-1">
               CEO, DreamDwell LTD
@@ -108,14 +108,14 @@ const About = () => {
               data-aos-delay="50"
               data-aos-duration="1000" className=" col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-7 mx-auto items-center justify-center mt-2 ">
             <div className="">
-              <img src="/public/jubair.png" alt="" />
+              <img src="jubair.png" alt="" />
               <p className="text-center font-semibold mt-2">Jubair Alam</p>
               <p className="text-center font-medium mt-1 text-neutral-600">
                 Associate Director, Accounts & Finance
               </p>
             </div>
             <div>
-              <img src="/public/monir.png " alt="" />
+              <img src="monir.png " alt="" />
               <p className="text-center font-semibold mt-2">Monir Ahmed</p>
               <p className="text-center font-medium mt-1 text-neutral-600">
                 General Manager, Product & Growth
@@ -126,21 +126,21 @@ const About = () => {
               data-aos-delay="60"
               data-aos-duration="1000" className=" col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-7 mx-auto items-center justify-center">
             <div className="">
-              <img src="/public/nahid.png" alt="" />
+              <img src="nahid.png" alt="" />
               <p className="text-center font-semibold mt-2">Nahid Abdullah</p>
               <p className="text-center font-medium mt-1 text-neutral-600">
                 General Manager
               </p>
             </div>
             <div className="">
-              <img src="/public/khan.png" alt="" />
+              <img src="khan.png" alt="" />
               <p className="text-center font-semibold mt-2">Rizvi Khan</p>
               <p className="text-center font-medium mt-1 text-neutral-600">
                 General Manager, Rental Operations
               </p>
             </div>
             <div className="">
-              <img src="/public/zaimul1_1.png" alt="" />
+              <img src="zaimul1_1.png" alt="" />
               <p className="text-center font-semibold mt-2">Zaimul Hossain</p>
               <p className="text-center font-medium mt-1 text-neutral-600">
                 General Manager, Customer Service

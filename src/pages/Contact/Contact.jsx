@@ -9,7 +9,7 @@ const Contact = () => {
       <div
         className="hero min-h-screen rounded-2xl  mb-10"
         style={{
-          backgroundImage: "url(/public/contact.jpg)",
+          backgroundImage: "url(contact.jpg)",
         }}
       >
         <div className="hero-overlay rounded-2xl bg-opacity-40"></div>
@@ -31,7 +31,7 @@ const Contact = () => {
           data-aos-duration="1000"
           className="border-2 h-[420px] border-gray-600 p-4 rounded-lg shadow-xl mb-10 text-center flex flex-col items-center justify-center"
         >
-          <img src="/public/phone.png" alt="" className="text-center" />
+          <img src="phone.png" alt="" className="text-center" />
           <p className="font-medium text-4xl">Telephone</p>
           <p className="text-neutral-600 text-base py-3 mb-2 mx-auto">
             Support is also available by mobile and telephone, but to get
@@ -52,7 +52,7 @@ const Contact = () => {
           className="border-2 h-[420px] border-gray-600 p-4 rounded-lg shadow-xl mb-10 
         text-center flex flex-col items-center justify-center"
         >
-          <img src="/public/mailBox.png" alt="" className="text-center" />
+          <img src="mailBox.png" alt="" className="text-center" />
           <p className="font-medium text-4xl">Address</p>
           <p className="text-neutral-600 text-base py-3 mb-2 mx-auto">
             You can reach us through our website and our social media platforms
