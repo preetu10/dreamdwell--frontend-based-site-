@@ -65,12 +65,12 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-48"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-1 lg:p-2 shadow bg-base-100 rounded-box w-48"
           >
             {links}
           </ul>
         </div>
-        <a href="/" className="btn btn-ghost font-bold text-3xl lg:text-4xl">
+        <a href="/" className="btn btn-ghost font-bold text-xl lg:text-4xl">
           <span className="text-[#CC935C]">Dream</span>Dwell
         </a>
       </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
             <>
             <button  className="tooltip tooltip-bottom" data-tip={user.displayName}>
           <Link to={`/profile/${user.displayName}`}>
-          <img src={user?.photoURL} onTouchMove={user.displayName} className="rounded-full w-10 h-10 lg:w-12 lg:h-12 mr-3" alt="user" />
+          <img src={user?.photoURL} onTouchMove={user.displayName} className="rounded-full w-10 h-10 lg:w-12 lg:h-12 mr-1 lg:mr-3" alt="user" />
           </Link>
             </button>
              <button onClick={handleLogOut} className="btn  font-bold text-sm lg:text-lg text-white bg-[#CC935C]">
