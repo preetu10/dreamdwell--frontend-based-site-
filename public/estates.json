@@ -45,7 +45,7 @@
         "status": "rent",
         "area": "600 sq ft (per room)",
         "location": "Mirpur, Dhaka, Bangladesh",
-        "facilities": ["Furnished apartments", "Study lounges", "Swimming pool"]
+        "facilities": ["Furnished apartment", "Study lounges", "Swimming pool"]
       },
       {
         "id": 5,

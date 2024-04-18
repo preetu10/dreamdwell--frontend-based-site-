@@ -22,7 +22,7 @@ const EstateDetail = () => {
   }
   return (
     <div className="hero mb-5 mt-5 bg-base-100">
-      <div className="hero-content flex-col lg:flex-row gap-10">
+      <div className="hero-content flex-col lg:flex-row gap-5">
         <img
           src={info.image}
           className="lg:max-w-xl h-[550px] rounded-lg shadow-2xl"
@@ -41,14 +41,18 @@ const EstateDetail = () => {
           {info.location}</span></p>
           <p className="text-lg  mt-3 mb-2"><span className="font-semibold mr-3">Status:</span> <span className="font-medium">
           {info.status}</span></p>
-          <div className="flex lg:flex-row gap-1 lg:gap-5 items-center">
-            <span className="font-semibold  mr-1 lg:mr-3 text-lg">Facilities:</span>
-           {
-            info.facilities.map((facility,index) => 
-                 <div key={index} className="badge badge-accent badge-outline font-bold text-black py-3 px-2">{facility}</div>
-            )
-           }
+          <div className="flex lg:flex-row  gap-2">
+          <span className="font-semibold  mr-1 lg:mr-3 text-lg">Facilities:</span>
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-3 ">
+            
+            {
+             info.facilities.map((facility,index) => 
+                  <div key={index} className="badge badge-accent badge-outline font-bold text-black py-3 px-3">{facility}</div>
+             )
+            }
+           </div>
           </div>
+          
            <button onClick={handleAdd} className="btn mt-2 bg-[#CC935C] text-white">Add to cart</button> 
         </div>
       </div>
