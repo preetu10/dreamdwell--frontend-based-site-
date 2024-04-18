@@ -29,7 +29,7 @@ const handleRegister = (e) => {
       return;
     }
 
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    const passwordRegex = /(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
       toast.error("Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long");
       return;
@@ -46,10 +46,10 @@ const handleRegister = (e) => {
         photoURL:photoURL
       })
       .then(()=>{
-        toast.success("You have successfully registered!");
         logout().
         then(()=>console.log("You have successfully logged out!"))
         .catch((err)=>console.log(err));
+        toast.success("You have successfully registered!");
         navigate("/login");
       })
       .catch(err=>{
