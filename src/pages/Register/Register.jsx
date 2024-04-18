@@ -59,7 +59,7 @@ const handleRegister = (e) => {
     })
     .catch(err=>{
       console.error(err);
-      toast.error("try again later");
+      toast.error("You may already have an account. Try to login.");
     })   
 }
     return (
