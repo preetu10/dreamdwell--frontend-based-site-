@@ -10,16 +10,12 @@ DreamDwell is an innovative online platform designed to simplify the process of 
 - **Cart Functionality**: DreamDwell allows users to add properties to their cart, facilitating the process of comparing and selecting their desired properties.
 - **Company Information**:  DreamDwell provides detailed information about the company, including achievements, contact information, and reasons why clients should choose it.
 
-## Packages Used In The Website
-- Swiper Slider
-- React Toastify
-- React Proptypes
-- Animate.css
-- AOS Package
-- React Icons
-- Firebase
-- Daisy UI
+## Used Tools
+
+- React JS
 - Tailwind CSS
+- Firebase
+  
 
 ## Live Site Link
 - https://dream-dwell.web.app
