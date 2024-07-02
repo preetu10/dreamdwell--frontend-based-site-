@@ -4,11 +4,12 @@ DreamDwell is an innovative online platform designed to simplify the process of 
 
 
 ## Key Features and Characteristics
-- **User-Friendly Interface**: DreamDwell boasts an intuitive and user-friendly interface, making it easy for users to navigate and find the information they need.
-- **Comprehensive Property Listings**: With a vast database of residential properties, DreamDwell offers a wide selection of listings to suit every preference and budget.
-- **Profile Management**: Users can easily register, login, and manage their profiles, including updating their name and photo URL.
-- **Cart Functionality**: DreamDwell allows users to add properties to their cart, facilitating the process of comparing and selecting their desired properties.
-- **Company Information**:  DreamDwell provides detailed information about the company, including achievements, contact information, and reasons why clients should choose it.
+
+- **User-Friendly Interface**: Intuitive and easy navigation for seamless user experience.
+- **Comprehensive Property Listings**: Extensive database offering diverse residential properties.
+- **Profile Management**: User-friendly registration, login, and profile updates.
+- **Cart Functionality**: Add properties to cart for easy comparison and selection.
+- **Company Information**: Detailed insights on achievements, contact details, and client benefits.
 
 ## Used Tools
 
